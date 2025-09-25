@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
   },
   "dependencies": {
     "html-entities": "^2.3.3",
-    "itty-router": "^4.2.2",
-    "node-html-parser": "^7.0.1"
+    "node-html-parser": "^7.0.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-cache": "^5.1.2"
   },
   "devDependencies": {
-    "wrangler": "^4.10.0"
+    "nodemon": "^3.0.1"
   }
 }
